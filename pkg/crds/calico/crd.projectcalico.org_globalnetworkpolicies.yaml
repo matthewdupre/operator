@@ -367,6 +367,17 @@ spec:
                     type: string
                   type: array
               type: object
+            status:
+              type: object
+              properties:
+                denyingTraffic:
+                  type: boolean
+                  description: Indicates whether the policy is currently denying any traffic.
+                allowingTraffic:
+                  type: boolean
+                  description: Indicates whether the policy is currently allowing any traffic.
           type: object
       served: true
       storage: true
+  subresources:
+    status: {}
